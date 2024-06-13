@@ -1,4 +1,4 @@
-.car-big-img{
+.car-big-img {
     display: flex;
     justify-content: center;
     position: relative;
@@ -7,115 +7,227 @@
     height: 650px;
     border: 1px solid;
     z-index: -10;
-    margin-top: 200px;
+
 }
-.header{
+
+.header {
     width: 100%;
     z-index: 10;
     height: 100%;
-}
-.header-container{
-    width: 100%;
-    height: 250px;
-    z-index: -10;
-    border: 1px  solid;
+    overflow: initial;
 }
 
-.car-img-slide{
- display: block;
- width: 20%;
- position: absolute;
- top: 3%;
- left: 103%;
-}
-.car-slide{
+/* .header-container{
     width: 100%;
+    height: 350px;
+    z-index: -10;
+    border: 1px  solid; */
+/* } */
+
+.thumbnails {
+    display: block;
+    width: 20%;
+    position: absolute;
+    top: 3%;
+    left: 103%;
 }
-.car-slide img{
+.thumbnails img {
+    cursor: pointer;
+    width: 200px;
+    height: auto;
+}
+
+.slide{
+    display: none;
+ }
+.slide.active {
+    
+    display: block;
+}
+
+.slide img {
     width: 100%;
     height: 650px;
     border: 1px solid;
 }
-.car-img-slide img {
-    width: 80%;
-}
-.status-container{
+
+.status-container {
     width: 60%;
     border: 1px solid;
     margin-left: 15%;
 }
-.name-price{
+
+.name-price {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.prices{
+
+.prices {
     border: 1px solid;
     height: 80px;
 }
-.price{
+
+.price {
     font-size: 20px;
     background-color: #00a2d1;
     padding: 10px 20px;
     font-weight: 700;
     color: #fff;
 }
-.color-container{
+
+.color-container {
     border-top: 1px solid rgb(181, 170, 170);
     border-bottom: 1px solid rgb(181, 170, 170);
     margin-top: 3%;
     padding: 2% 0px;
 
 }
-.select-color{
+
+.select-color {
     font-size: 15px;
     padding: 1%;
     margin-left: 2%;
     width: 25%;
 }
-.btn-sold{
+
+.btn-sold {
     padding: 2% 0%;
-    border-bottom: 1px solid rgb(181, 170, 170); ;
+    border-bottom: 1px solid rgb(181, 170, 170);
+    ;
 }
-#sold-out{
+
+#sold-out {
     font-size: 15px;
     padding: 1% 2%;
     border: none;
     color: #fff;
     background-color: #ededed;
 }
+
 #sold-out:hover {
     background-color: #00a2d1;
     color: #fff;
 }
-.car-detail-container{
+
+.car-detail-container {
     border: 1px solid;
-    width: 73%;
+    width: 75%;
     margin-left: 15%;
 }
 
 
-iframe{
-    
-}
-
-.product-relate-container{
+.product-relate-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     border: 1px solid;
     width: 60%;
-    
-    margin-left: 15%;
+    margin-left: 22%;
 }
-.product-relate{
+
+.product-relate {
     text-align: center;
     color: #555;
     text-transform: uppercase;
 }
-.box{
+
+.box {
     align-content: center;
     width: 100px;
     height: 4px;
     background-color: #00a2d1;
+}
+
+.list-car-container {
+    /* border: 1px solid; */
+    width: 75%;
+    margin-left: 15%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3%;
+}
+
+.product-container{
+    width: 263px;
+}
+
+.img-box{
+    position: relative;
+    /* border: 1px solid; */
+    width: 250px;
+    height: 194px;
+}
+.img-box img {
+    width: 250px;
+    height: 194px;
+}
+
+.price-box {
+    position: absolute;
+    background-color: #00a2d1;
+    width: 100px;
+    color: #fff;
+    padding: 6px 20px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-family: "Roboto";
+    right: 0;
+    bottom: 0;
+}
+.product-info{
+    position: relative;
+    padding: 15px 0;
+    margin-bottom: 15px;
+    border-bottom: solid 1px #ebebeb;
+}
+.product-name{
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0px;
+}
+
+.product-name a {
+    text-decoration: none;
+    color: #555555;
+}
+
+.product-name a:hover{
+    color: #00a2d1;
+}
+
+.product-action{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 7px;
+}
+
+.product-action a:hover{
+    color: #fff;
+    background-color: #00a2d1;
+    transition: all 0.5s ease;
+}
+
+.btn-card{
+    min-width: 125px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #636363;
+    background: #ededed;
+    font-weight: 300;
+    border-radius: 0px;
+    font-size: 14px;
+    text-decoration: none;
+}
+.btn-card img{
+    width: 14px;
+    height: 14px;
+}
+.product-action a:hover img{
+    filter: brightness(0) saturate(100%) invert(100%);
+    transition: all 0.5s ease;
 }
