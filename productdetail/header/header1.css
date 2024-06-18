@@ -1,4 +1,4 @@
-.container {
+.header {
     width: 85%;
     height: 150px;
     background-size: cover;
@@ -137,7 +137,7 @@
     color: #000000
 }
 
-.container1 {
+.header1 {
     display: flex;
     font-size: 20px;
     position: absolute;

@@ -1,0 +1,72 @@
+/* .dropdown {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+} */
+
+.dropdown input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.dropdown-content div {
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.dropdown-content div:hover {
+    background-color: #f1f1f1;
+}
+
+.show {
+    display: block;
+}
+
+.container{
+    margin-top: 40px;
+}
+
+.float-title{
+    float: left;
+}
+
+.text-align{
+    text-align: left;
+}
+.col{
+    border: 1px solid;
+}
+.form-check{
+    padding-left: 40px;
+}
+.logo-pay{
+    text-decoration: none;
+    font-size:xx-large;
+    padding-left: 8%;
+    color: #2a9dcc;
+}
+.logo-login{
+    float: right;
+    text-decoration: none;
+    font-size:large ;
+}
+.logo-login img{
+    width: 21px;
+    height: auto;
+    
+}
+.logo-login img:hover{
+ filter: ;
+}

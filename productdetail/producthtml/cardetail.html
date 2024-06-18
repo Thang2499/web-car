@@ -1,55 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../header/header1.css">
     <link rel="stylesheet" href="../productcss/cardetail.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
 </head>
-<body >
-    
-    <div class="header-container" >
-    <iframe src="../header/header1.html" frameborder=none class="header" scrolling="no"></iframe>
-</div>
-    <div class="car-big-img">
-        <div class="car-slide">
-        <img id="big-img" src="../productimg/carbig.webp" alt="">
+
+<body>
+   
+    <div class="header">
+        <img class="IMG" src="../header/logo.webp" alt="">
+        <div class="IMG-btn">
         </div>
-        <div class="car-img-slide">
-            <img src="../productimg/carslide1.webp" alt="">
-            <img src="../productimg/carslide2.webp" alt="">
+        <div class="login">
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Tìm Kiếm">
+            </div>
+            <div class="dangnhap">
+                <a href="#">
+
+                    <p>Đăng nhập
+                        <i class="fa-solid fa-user"></i>
+                    </p>
+                </a>
+            </div>
+            <div class="dangky">
+                <a href="#">
+
+                    <p>Đăng ký
+                        <i class="fa-solid fa-user-plus"></i>
+                    </p>
+                </a>
+            </div>
         </div>
     </div>
 
-    <div>
-        <div class="status-container">
-            <div class="name-price">
-                <div>
-                    <h2>Mitsubishi Attrage GLX MT</h2>
-                </div>
-                    <span class="price">470.000.000₫</span>
 
-            </div>
+    <div class="header1">
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li class="nav-link">
+                    <a href="#">Trang Chủ</a>
+                </li>
+                <li class="nav-link services">
+                    <a href="#">Sản Phẩm
+                        <span class="icon">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </a>
+
+                    <ul class="drop-down">
+                        <li>Sản phẩm mới</li>
+                        <li>Sản phẩm nổi bật</li>
+                        <li>Sản phẩm khuyến mãi</li>
+                        <li>Honda</li>
+                        <li>Mercedes Benz</li>
+
+                    </ul>
+                </li>
+                <li class="nav-link">
+                    <a href="#">Giới Thiệu</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">Liên Hệ</a>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+
+    <div class="car-big-img">
+        <div class="slide active">
+            <img src="../productimg/carbig.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="../productimg/carbig2.jpg" alt="">
+        </div>
+        <div class="thumbnails">
+            <img src="../productimg/carslide1.jpg" data-slide="0">
+            <img src="../productimg/carslide2.jpg" data-slide="1">
+        </div>
+        <div class="thumbnails"></div>
+    </div>
+    <script src="../productjs/productdetail.js"></script>
+
+
+
+    <div class="status-container">
+        <div class="name-price">
             <div>
-                <span><b>Mã sản phẩm:</b> (đang cập nhật)</span><br>
-                <span><b>Nhà sản xuất:</b> Mitsubishi</span><br><br>
-                <span>Mô tả đang cập nhật</span>
+                <h2>Mitsubishi Attrage GLX MT</h2>
             </div>
-            <div class="color-container">
-                <span>Màu sắc</span>
-                <select class=" select-color">
-                    <option value="">Trắng</option>
-                    <option value="">Đen</option>
-                </select>
-            </div>
-            <div class="btn-sold">
-                <button id="sold-out">Hết hàng</button>
-            </div>
+            <span class="price">470.000.000₫</span>
+
+        </div>
+        <div>
+            <span><b>Mã sản phẩm:</b> (đang cập nhật)</span><br>
+            <span><b>Nhà sản xuất:</b> Mitsubishi</span><br><br>
+            <span>Mô tả đang cập nhật</span>
+        </div>
+    </div>
+    <div class="color-container-div">
+        <div class="color-container">
+            <span>Màu sắc</span>
+            <select class=" select-color">
+                <option value="">Trắng</option>
+                <option value="">Đen</option>
+            </select>
+        </div>
+        <div class="btn-sold">
+            <button id="sold-out">Hết hàng</button>
         </div>
     </div>
     <div class="car-detail-container">
-        <button class="car-detail" onclick="">Mô tả</button>
-        <button class="car-detail" onclick="">Hướng dẫn mua hàng</button>
+        <button class="tablink" onclick="openPage('Home', this, 'white')" id="defaultOpen">Mô tả</button>
+        <button class="tablink" onclick="openPage('News', this, 'white')">Hướng dẫn mua hàng</button>
+
+        <div id="Home" class="tabcontent">
+            <p>Mitsubishi Attrage là dòng sản phẩm mới của Mitsubishi Việt Nam, dòng xe Sedan 5 chỗ nhập khẩu nguyên
+                chiếc từ Thái Lan với nhiều trang thiết bị tiện nghi hiện đại mang đến cho bạn và gia đình những trải
+                nghiệm thú vị. Mitsubishi Attrage là dòng xe toàn cầu của Mitsubishi đã được phân phối tại các thị
+                trường Mỹ, Nhật, Thái Lan...mang phong cách thiết kế mới với những đường nét sang trọng, thân thiện với
+                môi trường và tính khí động học cao.</p>
+            Mitsubishi Attrage được thiết kế với những đường nét sang trọng, hiện đại và tinh tế phù hợp với nhiều đối
+            tượng như gia đình trẻ, doanh nhân trẻ, phụ nữ thành đạt... Phần đầu xe Mitsubishi Attrage nổi bật với mặt
+            ga lăng mạ crôm sang trọng, cụm đèn pha thanh lịch và tinh tế cùng với đèn sương mù thiết kế hiện đại trẻ
+            trung. Mitsubishi Attrage được trang bị nhiều tiện ích hiện đại, nội thất rộng rãi thoải mái cho 5 người
+            ngồi, sang trọng với ghế bọc da cao cấp viền chỉ đỏ. Hệ thống âm thanh hiện đại với đầu DVD màn hình cảm ứng
+            7 inch hỗ trợ USB, Bluetooth, AUX, HDMI... Khoang hành lý phía sau Mitsubishi Attrage rộng rãi với thể tích
+            lên tới 450 lít và được trang bị hệ thống nút bấm thông minh mở cốp sau. Giúp cho việc chuyên chở đồ của Bạn
+            và gia đình trong các chuyến đi trở lên dễ dàng và tiện lợi.</p>
+
+            <img src="../productimg/carbig.jpg" alt="">
+            <p>Mitsubishi Attrage được trang bị hệ thống khởi động bằng nút bấm và hệ thống mở cửa thông minh giúp Bạn
+                dễ dàng sử dụng vận hành chiếc xe chi với một thao tác đơn giản. Động cơ tiên tiến MIVEC 1.2 cho khả
+                năng vận hành tối ưu trên đường nội thành cũng như đi đường trường, đồng thời động cơ có trọng lượng
+                nhẹ, luôn duy trì hoạt động ở số vòng quay thấp, đảm bảo tiết kiệm nhiên liệu tối đa chỉ với 4,7 L/100
+                Km. Hộp số thông minh vô cấp có khả năng ghi nhớ phong cách người lái, giúp sang số nhẹ nhàng và êm dịu,
+                đồng thời tiết kiệm nhiên liệu.</p>
+            <p>Mitsubishi Attrage có tính năng an toàn cao với hệ thống túi khí đôi kết hợp với căng đai tự động cho
+                hàng ghế đầu khi xảy ra va chạm. Attrage đã đạt được tiêu chuẩn an toàn 5 sao của tổ chức an toàn ANCAP
+                tại ÚC và tổ chức NCAP của ASEAN. Cùng với đó là hệ thống phanh ABS giúp chống bó cứng phanh và làm chủ
+                tay lái khi phanh trên đường trơn trượt, hệ thống phanh EBD phân bố lực phanh tối ưu để giảm quãng đường
+                phanh khi trọng tải thay đổi.</p>
+            <img src="../productimg/carbig2.jpg" alt="">
+        </div>
+
+        <div id="News" class="tabcontent">
+            <p>Bước 1: Tìm sản phẩm cần mua Bạn có thể truy cập website để tìm và chọn sản phẩm muốn mua bằng nhiều
+                cách:</p>
+            <p>+ Sử dụng ô tìm kiếm phía trên, gõ tên sản phẩm muốn mua (có thể tìm đích danh 1 sản phẩm, tìm theo
+                hãng...). Website sẽ cung cấp cho bạn những gợi ý chính xác để lựa chọn:</p>
+            <p>Bước 2: Đặt mua sản phẩm Sau khi chọn được sản phẩm ưng ý muốn mua, bạn tiến hành đặt hàng bằng cách:</p>
+            <p>+ Chọn vào nút MUA NGAY nếu bạn muốn thanh toán luôn toàn bộ giá tiền sản phẩm</p>
+            <p>+ Điền đầy đủ các thông tin mua hàng theo các bước trên website, sau đó chọn hình thức nhận hàng là giao
+                hàng tận nơi hay đến siêu thị lấy hàng, chọn hình thức thanh toán là trả khi nhận hàng hay thanh toán
+                online (bằng thẻ ATM, VISA hay MasterCard) và hoàn tất đặt hàng.</p>
+            <p>+Lưu ý:</p>
+            <p>1. Chúng tôi chỉ chấp nhận những đơn đặt hàng khi cung cấp đủ thông tin chính xác về địa chỉ, số điện
+                thoại. Sau khi bạn đặt hàng, chúng tôi sẽ liên lạc lại để kiểm tra thông tin và thỏa thuận thêm những
+                điều có liên quan.</p>
+            <p>2. Một số trường hợp nhạy cảm: giá trị đơn hàng quá lớn & thời gian giao hàng vào buổi tối địa chỉ giao
+                hàng trong ngõ hoặc có thể dẫn đến nguy hiểm. Chúng tôi sẽ chủ động liên lạc với quý khách để thống nhất
+                lại thời gian giao hàng cụ thể.</p>
+        </div>
     </div>
     <div class="product-relate-container">
         <div class="product-relate">
@@ -57,5 +178,84 @@
         </div>
         <div class="box"></div>
     </div>
+    <div class="list-car-container">
+        <div class="product-container">
+            <div class="img-box">
+                <img src="../productimg/product-list/1.webp" alt="">
+                <div class="price-box">1.000.000.000₫</div>
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">
+                    <a href="#"> Toyota Corolla Altis</a>
+                </h3>
+            </div>
+            <div class="product-action">
+                <a class="btn-card" href="">
+                    <img src="../productimg/svg-img/shopping-cart-4-svgrepo-com.svg" alt="">
+                    Tùy chọn</a>
+                <a class="btn-card" href="">
+                    <img src="../productimg/svg-img/eye-svgrepo-com.svg" alt="">
+                    Chi tiết</a>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="img-box">
+                <img src="../productimg/product-list/2.webp" alt="">
+                <div class="price-box">720.000.000₫</div>
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">
+                    <a href="#"> Toyota Corolla Altis</a>
+                </h3>
+            </div>
+            <div class="product-action">
+                <a class="btn-card" href="">
+                    <img src="../productimg/svg-img/shopping-cart-4-svgrepo-com.svg" alt="">
+                    Tùy chọn</a>
+                <a class="btn-card" href="">
+                    <img src="../productimg/svg-img/eye-svgrepo-com.svg" alt="">
+                    Chi tiết</a>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="img-box">
+                <img src="../productimg/product-list/3.webp" alt="">
+                <div class="price-box">650.000.000₫</div>
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">
+                    <a href="#"> Toyota Corolla Altis</a>
+                </h3>
+            </div>
+            <div class="product-action">
+                <a class="btn-card" href="">
+                    <img src="../productimg/svg-img/shopping-cart-4-svgrepo-com.svg" alt="">
+                    Tùy chọn</a>
+                <a class="btn-card" href="">
+                    <img src="../productimg/svg-img/eye-svgrepo-com.svg" alt="">
+                    Chi tiết</a>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="img-box">
+                <img src="../productimg/product-list/4.webp" alt="">
+                <div class="price-box">770.000.000₫</div>
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">
+                    <a href="#"> Toyota Corolla Altis</a>
+                </h3>
+            </div>
+            <div class="product-action">
+                <a class="btn-card" href="">
+                    <img src="../productimg/svg-img/shopping-cart-4-svgrepo-com.svg" alt="">
+                    Tùy chọn</a>
+                <a class="btn-card" href="">
+                    <img src="../productimg/svg-img/eye-svgrepo-com.svg" alt="">
+                    Chi tiết</a>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
