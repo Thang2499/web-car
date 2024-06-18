@@ -1,17 +1,11 @@
-// document.addEventListener("DOMContentLoaded", function() {
-//     const mainImage = document.getElementById('big-img');
-//     const thumb1 = document.getElementById('slide-img1');
-//     const thumb2 = document.getElementById('slide-img2');
-
-//     thumb1.addEventListener('click', function() {
-//         mainImage.style.backgroundImage = "C:/Users/Hp/Desktop/mindx/web car/productdetail/productimg/carbig.jpg";
-//     });
-
-//     thumb2.addEventListener('click', function() {
-//         mainImage.style.backgroundImage = 'url(C:/Users/Hp/Desktop/mindx/web car/productdetail/productimg/carbig2.jpg)';
-//     });
-// });
 document.addEventListener('DOMContentLoaded', function() {
+
+    let defaultOpenButton = document.getElementById("defaultOpen");
+    if (defaultOpenButton) {
+        defaultOpenButton.click();
+    }
+    openPage('Home', defaultOpenButton, 'white')
+    
     const slides = document.querySelectorAll('.slide');
     const thumbnails = document.querySelectorAll('.thumbnails img');
 
@@ -28,3 +22,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+function openPage(pageName,elmnt,color) {
+    let i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+      tablinks[i].style.borderTop = "none";   
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+    elmnt.style.borderTop = "4px solid #00a2d1";
+  }
