@@ -7,150 +7,84 @@
     <title>Document</title>
     <link rel="stylesheet" href="../header/header1.css">
     <link rel="stylesheet" href="../productcss/cardetail.css">
-   
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
 </head>
 
 <body>
-   
-    <div class="header">
-        <img class="IMG" src="../header/logo.webp" alt="">
-        <div class="IMG-btn">
-        </div>
-        <div class="login">
-            <div class="search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Tìm Kiếm">
-            </div>
-            <div class="dangnhap">
-                <a href="#">
 
-                    <p>Đăng nhập
-                        <i class="fa-solid fa-user"></i>
-                    </p>
-                </a>
-            </div>
-            <div class="dangky">
-                <a href="#">
-
-                    <p>Đăng ký
-                        <i class="fa-solid fa-user-plus"></i>
-                    </p>
-                </a>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="header1">
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li class="nav-link">
-                    <a href="#">Trang Chủ</a>
-                </li>
-                <li class="nav-link services">
-                    <a href="#">Sản Phẩm
-                        <span class="icon">
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </span>
-                    </a>
-
-                    <ul class="drop-down">
-                        <li>Sản phẩm mới</li>
-                        <li>Sản phẩm nổi bật</li>
-                        <li>Sản phẩm khuyến mãi</li>
-                        <li>Honda</li>
-                        <li>Mercedes Benz</li>
-
-                    </ul>
-                </li>
-                <li class="nav-link">
-                    <a href="#">Giới Thiệu</a>
-                </li>
-                <li class="nav-link">
-                    <a href="#">Liên Hệ</a>
-                </li>
-
-            </ul>
-        </nav>
-    </div>
 
     <div class="car-big-img">
         <div class="slide active">
-            <img src="../productimg/carbig.jpg" alt="">
+            <img id="bigimg" src="../productimg/product-list/4.jpg" alt="xe hơi">
         </div>
         <div class="slide">
-            <img src="../productimg/carbig2.jpg" alt="">
+            <img src="../productimg/svg-img/4.jpg" alt="">
         </div>
         <div class="thumbnails">
-            <img src="../productimg/carslide1.jpg" data-slide="0">
-            <img src="../productimg/carslide2.jpg" data-slide="1">
+            <img src="../productimg/product-list/4.jpg" data-slide="0">
+            <img src="../productimg/product-list/5.jpg" data-slide="1">
         </div>
-        <div class="thumbnails"></div>
     </div>
-    <script src="../productjs/productdetail.js"></script>
-
-
-
     <div class="status-container">
         <div class="name-price">
             <div>
-                <h2>Mitsubishi Attrage GLX MT</h2>
+                <h2 id="productname">Ford Everest XLT 4×2 MT</h2>
             </div>
-            <span class="price">470.000.000₫</span>
-
+            <span id="carprice" class="price" value="470.000.000₫">470.000.000</span>
         </div>
         <div>
             <span><b>Mã sản phẩm:</b> (đang cập nhật)</span><br>
-            <span><b>Nhà sản xuất:</b> Mitsubishi</span><br><br>
-            <span>Mô tả đang cập nhật</span>
+            <span><b>Nhà sản xuất:</b> Ford</span><br><br>
+            <ul>
+                <li>Xăng 1.5L Duratec 16 Van</li>
+                <li>Hệ thống nhiên liệu phun đa điểm</li>
+                <li>Hệ thống lái trợ lực điện điều khiển điện tử</li>
+                <li>Hộp số tự động 6 cấp PowerShift</li>
+            </ul>
         </div>
     </div>
-    <div class="color-container-div">
+    <div  class="color-container-div">
         <div class="color-container">
             <span>Màu sắc</span>
-            <select class=" select-color">
-                <option value="">Trắng</option>
-                <option value="">Đen</option>
+            <select id="selected" class=" select-color">
+                <option>Trắng</option>
+                <option>Đen</option>
             </select>
         </div>
-        <div class="btn-sold">
-            <button id="sold-out">Hết hàng</button>
+        <div id="clear" class="btn-sold">
+            <p>Số lượng:</p>
+            <button id="btn1" type="button">-</button>
+            <input id="numbers" type="text" disabled="true" value="1" min="1">
+            <button id="btn" type="button">+</button>
+            <button id="btnbuy"><a href="./pay-page.html" onclick="submitForm()">Mua hàng</a></button>
+           
         </div>
+        <script src="../productjs/pay-card.js"></script>
+        <script src="../productjs/productdetail.js"></script>
     </div>
     <div class="car-detail-container">
         <button class="tablink" onclick="openPage('Home', this, 'white')" id="defaultOpen">Mô tả</button>
         <button class="tablink" onclick="openPage('News', this, 'white')">Hướng dẫn mua hàng</button>
 
         <div id="Home" class="tabcontent">
-            <p>Mitsubishi Attrage là dòng sản phẩm mới của Mitsubishi Việt Nam, dòng xe Sedan 5 chỗ nhập khẩu nguyên
-                chiếc từ Thái Lan với nhiều trang thiết bị tiện nghi hiện đại mang đến cho bạn và gia đình những trải
-                nghiệm thú vị. Mitsubishi Attrage là dòng xe toàn cầu của Mitsubishi đã được phân phối tại các thị
-                trường Mỹ, Nhật, Thái Lan...mang phong cách thiết kế mới với những đường nét sang trọng, thân thiện với
-                môi trường và tính khí động học cao.</p>
-            Mitsubishi Attrage được thiết kế với những đường nét sang trọng, hiện đại và tinh tế phù hợp với nhiều đối
-            tượng như gia đình trẻ, doanh nhân trẻ, phụ nữ thành đạt... Phần đầu xe Mitsubishi Attrage nổi bật với mặt
-            ga lăng mạ crôm sang trọng, cụm đèn pha thanh lịch và tinh tế cùng với đèn sương mù thiết kế hiện đại trẻ
-            trung. Mitsubishi Attrage được trang bị nhiều tiện ích hiện đại, nội thất rộng rãi thoải mái cho 5 người
-            ngồi, sang trọng với ghế bọc da cao cấp viền chỉ đỏ. Hệ thống âm thanh hiện đại với đầu DVD màn hình cảm ứng
-            7 inch hỗ trợ USB, Bluetooth, AUX, HDMI... Khoang hành lý phía sau Mitsubishi Attrage rộng rãi với thể tích
-            lên tới 450 lít và được trang bị hệ thống nút bấm thông minh mở cốp sau. Giúp cho việc chuyên chở đồ của Bạn
-            và gia đình trong các chuyến đi trở lên dễ dàng và tiện lợi.</p>
+            <p>Ford Everest mới vượt xa các loại xe khác cùng dòng nhờ động cơ Duratorq TDCi 2.5L vô địch với công suất
+                143PS và mô men xoắn 330Nm. Ngoài ra, hệ thống khung gầm chắc chắn với kết cấu các dầm bậc thang gối lên
+                nhau càng làm tăng thêm độ vững chãi của xe. Hãy cảm nhận sức mạnh đích thực khi tăng tốc và tạo dấu ấn
+                riêng cả bạn.</p>
+            <p>Ford Everest mới hiện đại đến từng chi tiết, từ cửa gió bên hông xe sơn nhũ bạc đến kiểu dáng gương chiếu
+                hậu tích hợp đèn báo rẽ. Ngay khi vừa lăn bánh, bạn đã khiến mọi người phải chú ý với chiếc vành xe 18″
+                kiểu thể thao ấn tượng. Không chỉ thế, mọi khách hàng đều tận hưởng cảm giác khoan khoái, thư giãn với
+                hệ thống 3 dàn cửa gió.</p>
 
-            <img src="../productimg/carbig.jpg" alt="">
-            <p>Mitsubishi Attrage được trang bị hệ thống khởi động bằng nút bấm và hệ thống mở cửa thông minh giúp Bạn
-                dễ dàng sử dụng vận hành chiếc xe chi với một thao tác đơn giản. Động cơ tiên tiến MIVEC 1.2 cho khả
-                năng vận hành tối ưu trên đường nội thành cũng như đi đường trường, đồng thời động cơ có trọng lượng
-                nhẹ, luôn duy trì hoạt động ở số vòng quay thấp, đảm bảo tiết kiệm nhiên liệu tối đa chỉ với 4,7 L/100
-                Km. Hộp số thông minh vô cấp có khả năng ghi nhớ phong cách người lái, giúp sang số nhẹ nhàng và êm dịu,
-                đồng thời tiết kiệm nhiên liệu.</p>
-            <p>Mitsubishi Attrage có tính năng an toàn cao với hệ thống túi khí đôi kết hợp với căng đai tự động cho
-                hàng ghế đầu khi xảy ra va chạm. Attrage đã đạt được tiêu chuẩn an toàn 5 sao của tổ chức an toàn ANCAP
-                tại ÚC và tổ chức NCAP của ASEAN. Cùng với đó là hệ thống phanh ABS giúp chống bó cứng phanh và làm chủ
-                tay lái khi phanh trên đường trơn trượt, hệ thống phanh EBD phân bố lực phanh tối ưu để giảm quãng đường
-                phanh khi trọng tải thay đổi.</p>
-            <img src="../productimg/carbig2.jpg" alt="">
+            <img src="../productimg/product-list/4.jpg" alt="">
+            <p>Everest mới cung cấp cho bạn tất cả mọi thứ từ sự thoải mái của ghế ngồi bọc da và ghế ngồi cho đến 7 chỗ
+                để chân rộng rãi, giắc cắm dành cho iPod của bạn và CD tương thích MP3 6 đĩa 6 loa, làm cho mỗi cuộc
+                hành trình, dù bạn đi đâu, vẫn luôn có cảm giác thoải mái nhất.</p>
+            <p>Everest được trang bị một động cơ 2.5 lít Duratorq TDCi với công suất 143PS và mô men xoắn 330Nm đem đến
+                cho bạn trải nghiệm 4×2 chinh phục mọi địa hình mà bạn muốn.</p>
+            <img src="../productimg/svg-img/4.jpg" alt="">
         </div>
 
         <div id="News" class="tabcontent">
