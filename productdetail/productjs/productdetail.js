@@ -38,3 +38,28 @@ function openPage(pageName,elmnt,color) {
     elmnt.style.backgroundColor = color;
     elmnt.style.borderTop = "4px solid #00a2d1";
   }
+
+const numbers2 = document.getElementById("numbers");
+const btn1 = document.getElementById("btn1");
+const btn = document.getElementById("btn");
+btn1.addEventListener('click', function(){
+    let count = parseInt(numbers2.value);
+        count -= 1;
+        numbers2.value = count;
+        updateButtonState(); 
+})
+btn.addEventListener('click', function(){
+    let count = parseInt(numbers2.value);
+        count += 1;
+        numbers2.value = count;
+        updateButtonState();
+})
+function updateButtonState() {
+    if (parseInt(numbers2.value) <= 1) {
+        btn1.disabled = true;
+    } else {
+        btn1.disabled = false;
+    }
+}
+updateButtonState();
+

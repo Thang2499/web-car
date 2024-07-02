@@ -3,7 +3,10 @@
     display: inline-block;
     width: 200px;
 } */
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+body{
+    font-family: "Roboto" , sans-serif;
+}
 .dropdown input {
     box-sizing: border-box;
     width: 100%;
@@ -35,7 +38,7 @@
 }
 
 .container{
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .float-title{
@@ -44,9 +47,6 @@
 
 .text-align{
     text-align: left;
-}
-.col{
-    border: 1px solid;
 }
 .form-check{
     padding-left: 40px;
@@ -67,6 +67,68 @@
     height: auto;
     
 }
-.logo-login img:hover{
- filter: ;
+
+.icon-img img{
+    width: 40%;
+    height: auto;
+}
+
+.product{
+    display: flex;
+    margin-top: 3%;
+}
+.product img{
+    width: 30%;
+    height: auto;
+}
+.name-title{
+    font-weight: bolder;
+}
+.order{
+    border-bottom: 1px solid #e1e1e1;
+    padding: 10px 0px;
+}
+.order h5{
+    color: #333;
+    font-weight: 600;
+}
+.color-price-div{
+    margin-left: 4%;
+    margin-top: 3%;
+}
+.order-list{
+    background-color: #fafafa;
+
+}
+.product-price, .product-color{
+    color: #717171;
+}
+.total-container{
+    display: flex;
+    margin-top: 10%;
+    justify-content: space-between;
+    color: #717171;
+    font-size: large;
+}
+.btnbuy{
+    float: right;
+    cursor: pointer;
+    background-color: #357ebd;
+    border-color: #2f71a9;
+    border: 1px transparent solid;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 500;
+    padding: .80em 1.7em;
+    text-align: center;
+}
+.btnbuy:hover {
+    background-color: #25639a;
+}
+.btnbuy-div{
+    margin-top: 10%;
+}
+
+.quantity{
+    color: #717171;
 }
